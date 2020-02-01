@@ -28,11 +28,10 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    
+    student_profile = {}
     html = open(index_url)
     index = Nokogiri::HTML(html)
-    
-    
+    student_profile[:twitter] = index.css()
   end
 
 end

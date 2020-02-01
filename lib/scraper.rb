@@ -31,7 +31,7 @@ class Scraper
     student_profile = {}
     html = open(index_url)
     index = Nokogiri::HTML(html)
-    student_profile[:twitter] = index.css()
+    student_profile[:twitter] = index.css("a").attribute("href").value 
   end
 
 end

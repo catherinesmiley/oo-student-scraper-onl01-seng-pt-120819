@@ -42,6 +42,9 @@ class Scraper
         student_profile[:blog] = social_media.attribute("href").value
       end 
     end 
+    
+    
+    
   end
 
 end

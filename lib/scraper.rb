@@ -35,6 +35,7 @@ class Scraper
       binding.pry 
       student_profile[:twitter] = social_media.css("div.social-icon-container a").attribute("href").value 
       student_profile[:linkedin] = social_media.css("div.social-icon-container a").attribute("href").value 
+    end 
   end
 
 end

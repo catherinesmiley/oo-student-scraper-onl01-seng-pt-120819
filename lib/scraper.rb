@@ -15,6 +15,7 @@ class Scraper
       student_details[:location] = student.css("p.student-location").text
       # url = student.css("a").attribute("href").value
       # student_details[:profile_url] = index_url.chomp("student-scraper-test-page/index.html") + url   
+      student_details[:profile_url] = student.css("a").attribute("href").value
       students << student_details 
     end 
     students 

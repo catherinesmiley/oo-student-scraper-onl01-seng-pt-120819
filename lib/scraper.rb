@@ -43,7 +43,7 @@ class Scraper
       end 
     end 
     
-    student_profile[:profile_quote] = profile.css("div.vitals-text-container .")
+    student_profile[:profile_quote] = profile.css("div.vitals-text-container .profile-quote")
     
   end
 

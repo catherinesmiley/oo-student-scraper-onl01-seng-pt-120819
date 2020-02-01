@@ -33,6 +33,7 @@ class Scraper
     index = Nokogiri::HTML(html)
     binding.pry 
     student_profile[:twitter] = index.css("div.social-icon-container a").attribute("href").value 
+    student_profile[:linkedin] = index.css("div.social-icon-container a").attribute("href").value 
   end
 
 end

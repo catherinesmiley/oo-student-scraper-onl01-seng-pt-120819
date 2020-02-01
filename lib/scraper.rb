@@ -28,10 +28,10 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
+    binding.pry 
     student_profile = {}
     html = open(index_url)
     index = Nokogiri::HTML(html)
-    binding.pry 
     student_profile[:twitter] = index.css("div.social-icon-container a").attribute("href").value 
   end
 

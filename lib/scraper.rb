@@ -30,8 +30,8 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     student_profile = {}
     html = open(profile_url)
-    index = Nokogiri::HTML(html)
-    index.css("div.social-icon-container").each do |social_media|      
+    profile = Nokogiri::HTML(html)
+    profile.css("div.social-icon-container").each do |social_media|      
       if social_media.attribute("href").value.include?("twitter")
         student_profile[:twitter] = social_media.css("a").attribute("href").value 
       elsif social_media.attribute("href").value.include?("linkedin")

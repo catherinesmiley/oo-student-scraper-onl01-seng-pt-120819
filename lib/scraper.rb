@@ -11,6 +11,7 @@ class Scraper
     
     index.css("div.student-card").each do |student|
       student_details = {}
+      binding.pry 
       student_details[:name] = student.css("h4.student-name").text
       student_details[:location] = student.css("p.student-location").text
       url = student.css("a").attribute("href").value

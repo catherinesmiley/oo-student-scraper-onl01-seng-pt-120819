@@ -42,8 +42,8 @@ class Scraper
         student_profile[:blog] = social_media.attribute("href").value
       end 
     end 
-    
-    student_profile[:profile_quote] = profile.css("div.vitals-text-container .profile-quote")
+    binding.pry 
+    student_profile[:profile_quote] = profile.css("div.vitals-text-container .profile-quote").text 
     
   end
 
